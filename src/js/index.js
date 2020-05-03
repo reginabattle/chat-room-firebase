@@ -1,7 +1,6 @@
 import 'babel-polyfill'
 import { Chatroom } from './components/chat'
 
-let username
 const chatForm = document.querySelector('.chat-form.send')
 const userForm = document.querySelector('.chat-form.update')
 const updateMsg = document.querySelector('.update-msg')
@@ -34,16 +33,7 @@ userForm.addEventListener('submit', e => {
 })
 
 // check local storage for username
-// const username = localStorage.username ? localStorage.username : 'anon' 
-
-if(localStorage.username) {
-    userForm.username.value = localStorage.username
-    
-}
-else {
-    userForm.username.value = 'anon'
-    username = 'anon'
-}
+const username = localStorage.username ? localStorage.username : 'anon' 
 
 // class instances
 const chatroom = new Chatroom('general', username)
