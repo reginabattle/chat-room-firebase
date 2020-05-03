@@ -1,0 +1,118 @@
+/* Chat rooms */
+.chat-rooms {
+    text-align: center;
+
+    button {
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+/* Chat window & form */
+.chat-forms,
+.chat-window {
+    background: $white;
+    padding: 3rem;
+    border-radius: 1rem;
+
+    @media(min-width: 767px) {
+        width: 60rem;
+        margin: 0 auto;
+    }
+}
+
+.chat-window {
+    margin-bottom: 0;
+    padding-top: 4rem;
+
+    @media(min-width: 767px) {
+        margin: 3rem auto 1.6rem;
+    }
+}
+
+.chat-form.send {
+    margin-bottom: 3rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    label {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 0.6rem;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 1rem 1.4rem;
+        border: 1px solid #dddddd;
+    }
+}
+
+.chat-form.update {
+
+    label {
+        display: block;
+    }
+
+    input {
+        color: $purple-dark;
+        padding: 0.6rem 1rem;
+        margin-left: 1rem;
+        background: none;
+        max-width: 22rem;
+        border: 2px solid $purple-dark;
+    }
+
+    button[type="submit"] {
+        background: $white;
+        color: $purple-dark;
+
+        &:hover {
+            color: $white;
+            background: $purple-dark;
+        }
+    }
+
+    .field-group {
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        font-size: 3.2rem;
+    }
+
+    ::-webkit-input-placeholder {
+        color: $purple-dark;
+    }
+}
+
+/* Chat list */
+.chat-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        padding: 0.6rem 0;
+    }
+
+    .username {
+        font-weight: 700;
+    }
+
+    .timestamp {
+        font-size: 1.4rem;
+    }
+}
+
+.update-msg {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    text-align: right;
+}

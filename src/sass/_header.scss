@@ -1,0 +1,12 @@
+.header {
+    color: lighten($purple-dark, 4%);
+    padding: 2rem 6rem;
+
+    @media(min-width: 768px) {
+        display: flex;
+        justify-content: flex-end;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+}

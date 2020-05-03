@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+    <link rel="stylesheet" href="sass/style.scss">
+    <title>Vinyl Chat</title>
+</head>
+<body>
+    <header class="header">
+        <form class="chat-form update">
+            <div class="field-group">
+                <label class="visually-hidden" for="username">Username</label>
+                <span class="jam jam-user-circle"></span>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <button class="visually-hidden" id="update" type="submit"></button>
+            </div>
+            <div class="update-msg"></div>
+        </form>
+    </header>
+    <main class="container">
+        <header class="page-header">
+            <h1>Vinyl Chat</h1>
+            <p>Meet other vinyl collectors just like you.</p>
+        </header>
+        <section class="chat">
+            <!-- Chat rooms -->
+            <div class="chat-rooms">
+                <button id="general">General</button>
+                <button id="hip-hop">Hip Hop</button>
+                <button id="jazz">Jazz</button>
+                <button id="soul">Rock</button>
+            </div>
+
+            <!-- Chat window -->
+            <div class="chat-window">
+                <ul class="chat-list"></ul>
+            </div>
+
+            <!-- Chat forms -->
+            <div class="chat-forms">
+                <form class="chat-form send">
+                    <div class="field-group">
+                        <label for="message">Message</label>
+                        <input type="text" name="message" id="message" required>
+                        <button id="send" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
