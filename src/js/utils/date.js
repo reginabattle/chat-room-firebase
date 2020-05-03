@@ -1,7 +1,7 @@
 export const getTime = date => {
     let hours = date.getHours()
     let minutes = date.getMinutes()
-    let time = hours >= 12 ? 'AM' : 'PM';
+    let time = hours >= 12 ? 'PM' : 'AM';
 
     // convert to 12-hour time 
     hours = ((hours + 11) % 12 + 1)
