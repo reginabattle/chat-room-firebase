@@ -12,7 +12,7 @@ button {
     position: relative;
     border: 1px solid $beige-dark;
     text-transform: uppercase;
-    transition: 0.14s all ease-in;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
     &::before,
     &::after {
