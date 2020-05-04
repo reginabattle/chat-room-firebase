@@ -5,6 +5,10 @@ export class ChatUI {
         this.list = list
     }
 
+    clear() {
+        this.list.innerHTML = '';
+    }
+
     showChats(data, id) {
         const time = getTime(data.created.toDate())
         const date = getDate(data.created.toDate())
@@ -28,5 +32,10 @@ export class ChatUI {
                 chat.remove();
             }
         })
+    }
+
+    updateStatus(user) {
+        let userStatus = document.querySelector('.user-status span')
+        userStatus.innerText = `${user}`
     }
 }
