@@ -33,6 +33,7 @@
     }
 }
 
+/* Chat message form */
 .chat-form.send {
     margin-bottom: 3rem;
 
@@ -53,6 +54,7 @@
     }
 }
 
+/* Update user form */
 .chat-form.update {
 
     label {
@@ -111,8 +113,10 @@
     }
 }
 
-.update-msg {
+.update-msg,
+.user-status {
     font-size: 1.4rem;
-    margin-top: 1rem;
+    font-weight: 400;
+    margin-top: 0.8rem;
     text-align: right;
 }

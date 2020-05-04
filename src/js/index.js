@@ -3,6 +3,7 @@ import { Chatroom } from './components/chat'
 
 const chatForm = document.querySelector('.chat-form.send')
 const userForm = document.querySelector('.chat-form.update')
+const userStatus = document.querySelector('.user-status')
 const updateMsg = document.querySelector('.update-msg')
 
 // event listener - add new chat
@@ -21,14 +22,13 @@ userForm.addEventListener('submit', e => {
 
     // update username 
     chatroom.updateUser(username)
-    
 
     // clear form fields
     userForm.reset()
 
     // show then hide update message
     updateMsg.innerText = `Name updated`
-    userForm.username.value = username
+    userStatus.innerText = `Logged in as ${username}`
     setTimeout(() => updateMsg.innerText = '', 3000)
 })
 
